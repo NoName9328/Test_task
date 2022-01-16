@@ -17,7 +17,7 @@ private:
 public:
 	Person() = default;
 	Person(std::vector<Person> Persons);
-	void ShowPersons()noexcept(true);
+	void ShowPersons() noexcept(true);
 	void setDate(std::string Date);
 	void setName(std::string Name);
 	void setE_mail(std::string E_mail);
