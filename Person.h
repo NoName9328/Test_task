@@ -1,12 +1,10 @@
 #pragma once
-
 #include <iostream>
 #include <vector>
 
 class Person
 {
 private:
-
 	int Total_Hourse;
 	std::string Name;
 	std::string unknown;
@@ -16,31 +14,28 @@ private:
 	std::string Employee;
 	std::string Departament;
 	std::vector<Person> Persons;
-
 public:
 	Person() = default;
-	Person(std::vector<Person> Persons);
+	Person(std::vector<Person> Persons)noexcept(true);
+	void ShowPersons()noexcept(true);
+	void setDate(std::string Date)noexcept(true);
+	void setName(std::string Name)noexcept(true);
+	void setE_mail(std::string E_mail)noexcept(true);
+	void setunknown(std::string unknown)noexcept(true);
+	void setProject(std::string Project)noexcept(true);
+	void setEmployee(std::string Employee)noexcept(true);
+	void setTotal_Hourse(std::string Hourse)noexcept(true);
+	void setDepartament(std::string Departament)noexcept(true);
 
-	void ShowPersons();
+	friend std::ostream& operator<<(std::ostream& out, Person p)noexcept(true);
 
-	void setDate(std::string Date);
-	void setName(std::string Name);
-	void setunknown(std::string BRED);
-	void setE_mail(std::string E_mail);
-	void setProject(std::string Project);
-	void setEmployee(std::string Employee);
-	void setTotal_Hourse(std::string Hourse);
-	void setDepartament(std::string Departament);
-
-	friend std::ostream& operator<<(std::ostream& out, Person p);
-
-	int getTotal_Hourse();
-	std::string getName();
-	std::string getMonth();
-	std::string getE_mail();
-	std::string getProject();
-	std::string getunknown();
-	std::string getEmployee();
-	std::string getDepartament();
+	int getTotal_Hourse()const noexcept(true);
+	std::string getName()const noexcept(true);
+	std::string getMonth()const noexcept(true);
+	std::string getE_mail()const noexcept(true);
+	std::string getProject()const noexcept(true);
+	std::string getunknown()const noexcept(true);
+	std::string getEmployee()const noexcept(true);
+	std::string getDepartament()const noexcept(true);
 };
 

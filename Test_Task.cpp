@@ -3,18 +3,15 @@
 #include "ParserTemplate.h"
 #include "Person.h"
 
-
 void menu()
 {
 	bool activate = true;
-
-
 	while (activate != false)
 	{
 		char question;
 		std::string path;
 
-		std::cout << "\n\n\t\t\t\t Enter filename in the console, pleas(People.csv): ";
+		std::cout << "\n\n\t\t\t\t Enter filename in the console, please(People.csv): ";
 		std::cin >> path;
 		std::cout << std::endl;
 
@@ -38,15 +35,12 @@ void menu()
 			break;
 			system("cls");
 		}
-
 	}
 }
 
 int main()
 {
-
 	menu();
-
 
 	return 0;
 }

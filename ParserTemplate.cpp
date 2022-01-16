@@ -1,23 +1,19 @@
 #include "ParserTemplate.h"
 
-ParserTemplate::ParserTemplate(std::string path) : path(path)
+ParserTemplate::ParserTemplate(std::string path) noexcept : path(path)
 {
     FillBuffer();
     FillDetailsperson();
 }
-
-void ParserTemplate::FillBuffer()
+void ParserTemplate::FillBuffer()noexcept
 {
     File.open(path);
-
     if (File.is_open())
     {
         std::string line;
-
         while (std::getline(File, line))
         {
             std::vector<char> row;
-
             for (char& c : line)
             {
                 if (c != '\n')
@@ -31,18 +27,14 @@ void ParserTemplate::FillBuffer()
     else
     {
         std::cout << "file opening is failed";
-
     }
-
     File.close();
 }
-
-void ParserTemplate::FillDetailsperson()
+void ParserTemplate::FillDetailsperson()noexcept
 {
     Person PersonObject;
     std::string line;
     int pos = 0;
-
     for (size_t i = 0; i < buffer.size(); i++)
     {
         for (size_t j = 0; j < buffer[i].size(); j++)
@@ -118,8 +110,7 @@ void ParserTemplate::FillDetailsperson()
         pos = 0;
     }
 }
-
-Person ParserTemplate::getPersons()
+Person ParserTemplate::getPersons()noexcept
 {
     return this->bufferPersons;
 }

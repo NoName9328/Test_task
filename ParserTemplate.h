@@ -7,17 +7,14 @@
 class ParserTemplate
 {
 private:
-
 	std::string path;
 	std::ifstream File;
 	std::vector<Person> bufferPersons;
 	std::vector<std::vector<char>> buffer;
-
 public:
-
-	ParserTemplate(std::string path);
-	void FillBuffer();
-	void FillDetailsperson();
-	Person getPersons();
+	ParserTemplate(std::string path)noexcept(true);
+	void FillBuffer()noexcept(true);
+	void FillDetailsperson()noexcept(true);
+	Person getPersons()noexcept(true);
 };
 
