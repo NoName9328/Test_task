@@ -12,9 +12,9 @@ private:
 	std::vector<Person> bufferPersons;
 	std::vector<std::vector<char>> buffer;
 public:
-	ParserTemplate(std::string path)noexcept(true);
-	void FillBuffer()noexcept(true);
-	void FillDetailsperson()noexcept(true);
-	Person getPersons()noexcept(true);
+	ParserTemplate(std::string path) ;
+	void FillBuffer() noexcept(true);
+	void FillDetailsperson() noexcept(true);
+	Person getPersons() noexcept(true);
 };
 

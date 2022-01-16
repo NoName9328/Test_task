@@ -1,6 +1,6 @@
 #include "Person.h"
 
-Person::Person(std::vector<Person> Persons)noexcept
+Person::Person(std::vector<Person> Persons)
 {
 	this->Persons = Persons;
 }
@@ -11,35 +11,35 @@ void Person::ShowPersons() noexcept
 		std::cout << Persons[i];
 	}
 }
-void Person::setDate(std::string Date) noexcept
+void Person::setDate(std::string Date) 
 {
 	this->Month = Date;
 }
-void Person::setName(std::string Name) noexcept
+void Person::setName(std::string Name) 
 {
 	this->Name = Name;
 }
-void Person::setunknown(std::string unknown) noexcept
+void Person::setunknown(std::string unknown) 
 {
 	this->unknown = unknown;
 }
-void Person::setTotal_Hourse(std::string Hourse) noexcept
+void Person::setTotal_Hourse(std::string Hourse) 
 {
 	this->Total_Hourse = std::atoi(Hourse.c_str());
 }
-void Person::setE_mail(std::string E_mail) noexcept
+void Person::setE_mail(std::string E_mail) 
 {
 	this->E_mail = E_mail;
 }
-void Person::setProject(std::string Project) noexcept
+void Person::setProject(std::string Project)
 {
 	this->Project = Project;
 }
-void Person::setEmployee(std::string Employee) noexcept
+void Person::setEmployee(std::string Employee)
 {
 	this->Employee = Employee;
 }
-void Person::setDepartament(std::string Departament) noexcept
+void Person::setDepartament(std::string Departament) 
 {
 	this->Departament = Departament;
 }
@@ -49,35 +49,36 @@ std::ostream& operator<<(std::ostream& out, Person p) noexcept
 
 	return out;
 }
- std::string Person::getMonth()const noexcept
+ std::string Person::getMonth()const 
 {
 	 return  this->Month;
 }
- int Person::getTotal_Hourse() const noexcept
+ int Person::getTotal_Hourse() const 
 {
 	return this->Total_Hourse;
 }
- std::string Person::getunknown()const noexcept
+ std::string Person::getunknown()const 
 {
 	return this->unknown;
 }
- std::string Person::getName()const noexcept
+ std::string Person::getName()const 
 {
+
 	return this->Name;
 }
- std::string Person::getE_mail()const noexcept
+ std::string Person::getE_mail()const
 {
 	return this->E_mail;
 }
- std::string Person::getEmployee()const noexcept
+ std::string Person::getEmployee()const 
 {
 	return this->Employee;
 }
- std::string Person::getProject()const noexcept
+ std::string Person::getProject()const 
 {
 	return this->Project;
 }
- std::string Person::getDepartament()const noexcept
+ std::string Person::getDepartament()const 
 {
 	return this->Departament;
 }

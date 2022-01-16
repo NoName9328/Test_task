@@ -1,11 +1,11 @@
 #include "ParserTemplate.h"
 
-ParserTemplate::ParserTemplate(std::string path) noexcept : path(path)
+ParserTemplate::ParserTemplate(std::string path): path(path)
 {
     FillBuffer();
     FillDetailsperson();
 }
-void ParserTemplate::FillBuffer()noexcept
+void ParserTemplate::FillBuffer() noexcept
 {
     File.open(path);
     if (File.is_open())
@@ -30,7 +30,7 @@ void ParserTemplate::FillBuffer()noexcept
     }
     File.close();
 }
-void ParserTemplate::FillDetailsperson()noexcept
+void ParserTemplate::FillDetailsperson() noexcept
 {
     Person PersonObject;
     std::string line;
@@ -110,7 +110,7 @@ void ParserTemplate::FillDetailsperson()noexcept
         pos = 0;
     }
 }
-Person ParserTemplate::getPersons()noexcept
+Person ParserTemplate::getPersons() noexcept
 {
     return this->bufferPersons;
 }
